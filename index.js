@@ -27,7 +27,6 @@ const populateData = async () => {
       Dept_manager.findAll()
     ]);
 
-    // Convertendo todos para objetos simples (plain)
     const employees = employeesRaw.map(e => e.get({ plain: true }));
     const salaries = groupBy(salariesRaw.map(s => s.get({ plain: true })), 'emp_no');
     const titles = groupBy(titlesRaw.map(t => t.get({ plain: true })), 'emp_no');
@@ -60,18 +59,48 @@ const populateData = async () => {
         deptDoc.dept_name = deptInfo ? deptInfo.dept_name : null;
 
         const managers = deptManagers[de.dept_no] || [];
-        const matchMan = managers.find(dm =>
-          new Date(dm.from_date) <= new Date(de.from_date) &&
-          new Date(dm.to_date) >= new Date(de.to_date || new Date())
-        );
-        deptDoc.dept_manager = matchMan ? matchMan.emp_no : null;
+        const matchingManagers = managers.filter(dm => {
+          const empStart = new Date(de.from_date);
+          const empEnd = new Date(de.to_date || new Date());
+        
+          const mgrStart = new Date(dm.from_date);
+          const mgrEnd = new Date(dm.to_date || new Date());
+        
+          return mgrStart <= empEnd && mgrEnd >= empStart;
+        });
+
+        deptDoc.dept_managers = matchingManagers.map(m => {
+          return {
+          emp_no: m.emp_no,
+          first_name: "",
+          last_name: "",
+          from_date: m.from_date,
+          to_date: m.to_date};
+        });
 
         return deptDoc;
       });
 
       return emp;
     });
-
+    const nameLookup = new Map(
+      employees.map(e => [e.emp_no, { first_name: e.first_name, last_name: e.last_name }])
+    );
+    
+    for (const emp of employeesData) {
+      for (const dept of emp.departments) {
+        if (!dept.dept_managers) continue;
+    
+        dept.dept_managers = dept.dept_managers.map(m => {
+          const info = nameLookup.get(m.emp_no);
+          return {
+            ...m,
+            first_name: info?.first_name || "",
+            last_name: info?.last_name || ""
+          };
+        });
+      }
+    }
     return employeesData;
   } catch (error) {
     console.error("Erro ao montar dados:", error);

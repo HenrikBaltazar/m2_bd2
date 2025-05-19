@@ -10,7 +10,7 @@ const dept_no = "dept_no";
 const dept_name = "dept_name";
 const from_date = "from_date";
 const to_date = "to_date";
-const dept_manager = "dept_manager";
+const dept_managers = "dept_managers";
 
 const title = "title";
 const salary = "salary";
@@ -21,7 +21,7 @@ const departments =
     dept_name,
     from_date,
     to_date,
-    dept_manager
+    dept_managers
 }
 
 const titles =

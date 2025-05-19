@@ -8,15 +8,7 @@ const DATABASE = "employees";
 const sequelize = new Sequelize(DATABASE, MYSQL_LOGIN, MYSQL_PASSWORD, {
     host: MYSQL_IP,
     dialect: "mysql",
-    pool: {
-        max: 100,
-        min: 0,
-        acquire: 10 * 60 * 1000,  // tempo em milissegundos (30s)
-        idle: 10000
-      },
-    dialectOptions: {
-        connectTimeout: 10 * 60 * 1000
-    }
+    logging: false
 });
 
 const Employee = sequelize.define('Employee', {
