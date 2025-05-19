@@ -1,0 +1,16 @@
+{
+  "name": "m2_bd2",
+  "version": "1.0.0",
+  "description": "mongoDB",
+  "main": "mysql_to_mongo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Henrik, Joao e Eduardo",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.16.0",
+    "mysql2": "^3.14.1",
+    "sequelize": "^6.37.7"
+  }
+}
