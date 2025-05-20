@@ -1,0 +1,176 @@
+{
+    "_id": {
+      "$oid": "682b39e242f33ccaf95d49a8"
+    },
+    "emp_no": 10018,
+    "birth_date": "1954-06-19",
+    "first_name": "Kazuhide",
+    "last_name": "Peha",
+    "gender": "F",
+    "hire_date": "1987-04-03",
+    "departments": [
+      {
+        "dept_no": "d004",
+        "dept_name": "Production",
+        "from_date": "1992-07-29",
+        "to_date": "9999-01-01",
+        "dept_managers": [
+          {
+            "emp_no": 110344,
+            "first_name": "Rosine",
+            "last_name": "Cools",
+            "from_date": "1988-09-09",
+            "to_date": "1992-08-02"
+          },
+          {
+            "emp_no": 110386,
+            "first_name": "Shem",
+            "last_name": "Kieras",
+            "from_date": "1992-08-02",
+            "to_date": "1996-08-30"
+          },
+          {
+            "emp_no": 110420,
+            "first_name": "Oscar",
+            "last_name": "Ghazalie",
+            "from_date": "1996-08-30",
+            "to_date": "9999-01-01"
+          }
+        ]
+      },
+      {
+        "dept_no": "d005",
+        "dept_name": "Development",
+        "from_date": "1987-04-03",
+        "to_date": "1992-07-29",
+        "dept_managers": [
+          {
+            "emp_no": 110511,
+            "first_name": "DeForest",
+            "last_name": "Hagimont",
+            "from_date": "1985-01-01",
+            "to_date": "1992-04-25"
+          },
+          {
+            "emp_no": 110567,
+            "first_name": "Leon",
+            "last_name": "DasSarma",
+            "from_date": "1992-04-25",
+            "to_date": "9999-01-01"
+          }
+        ]
+      }
+    ],
+    "titles": [
+      {
+        "emp_no": 10018,
+        "title": "Engineer",
+        "from_date": "1987-04-03",
+        "to_date": "1995-04-03"
+      },
+      {
+        "emp_no": 10018,
+        "title": "Senior Engineer",
+        "from_date": "1995-04-03",
+        "to_date": "9999-01-01"
+      }
+    ],
+    "salaries": [
+      {
+        "emp_no": 10018,
+        "salary": 55881,
+        "from_date": "1987-04-03",
+        "to_date": "1988-04-02"
+      },
+      {
+        "emp_no": 10018,
+        "salary": 59206,
+        "from_date": "1988-04-02",
+        "to_date": "1989-04-02"
+      },
+      {
+        "emp_no": 10018,
+        "salary": 61361,
+        "from_date": "1989-04-02",
+        "to_date": "1990-04-02"
+      },
+      {
+        "emp_no": 10018,
+        "salary": 61648,
+        "from_date": "1990-04-02",
+        "to_date": "1991-04-02"
+      },
+      {
+        "emp_no": 10018,
+        "salary": 61217,
+        "from_date": "1991-04-02",
+        "to_date": "1992-04-01"
+      },
+      {
+        "emp_no": 10018,
+        "salary": 61244,
+        "from_date": "1992-04-01",
+        "to_date": "1993-04-01"
+      },
+      {
+        "emp_no": 10018,
+        "salary": 63286,
+        "from_date": "1993-04-01",
+        "to_date": "1994-04-01"
+      },
+      {
+        "emp_no": 10018,
+        "salary": 65739,
+        "from_date": "1994-04-01",
+        "to_date": "1995-04-01"
+      },
+      {
+        "emp_no": 10018,
+        "salary": 67519,
+        "from_date": "1995-04-01",
+        "to_date": "1996-03-31"
+      },
+      {
+        "emp_no": 10018,
+        "salary": 69276,
+        "from_date": "1996-03-31",
+        "to_date": "1997-03-31"
+      },
+      {
+        "emp_no": 10018,
+        "salary": 72585,
+        "from_date": "1997-03-31",
+        "to_date": "1998-03-31"
+      },
+      {
+        "emp_no": 10018,
+        "salary": 72804,
+        "from_date": "1998-03-31",
+        "to_date": "1999-03-31"
+      },
+      {
+        "emp_no": 10018,
+        "salary": 76957,
+        "from_date": "1999-03-31",
+        "to_date": "2000-03-30"
+      },
+      {
+        "emp_no": 10018,
+        "salary": 80305,
+        "from_date": "2000-03-30",
+        "to_date": "2001-03-30"
+      },
+      {
+        "emp_no": 10018,
+        "salary": 84541,
+        "from_date": "2001-03-30",
+        "to_date": "2002-03-30"
+      },
+      {
+        "emp_no": 10018,
+        "salary": 84672,
+        "from_date": "2002-03-30",
+        "to_date": "9999-01-01"
+      }
+    ]
+  }
